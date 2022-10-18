@@ -1,0 +1,66 @@
+=flex-center ()
+  display: flex
+  justify-content: center
+  align-items: center
+
+=center-item ($position)
+  position: $position
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+=center-item-y ($position: absolute)
+  position: $position
+  top: 50%
+  transform: translateY(-50%)
+
+=center-item-x ($position: absolute)
+  position: $position
+  left: 50%
+  transform: translateX(-50%)
+
+=font ($name,$w, $style, $path)
+  @font-face
+    font:
+      family: $name
+      weight: $w
+      style: $style
+      display: swap
+    src: local($name), url($path) format('ttf'),
+
+=bgp($path, $s, $pos1, $pos2 )
+  background:
+    repeat: no-repeat
+    image: url($path)
+    size: $s
+    position: $pos1 $pos2
+
+%school-italic
+  font:
+    family: 'Century_schoolbook_italic'
+    weight: 400
+
+%school
+  font:
+    family: 'Century_schoolbook'
+    weight: 400
+
+%gothic
+  font:
+    family: 'gothic'
+    weight: 400
+
+%gothic-italic
+  font:
+    family: 'gothic_italic'
+    weight: 400
+
+%gradient-text
+  background: linear-gradient(90deg, #FEDBAF 0%, #776740 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+%gradient-border
+  border: 1.5px solid transparent
+  border-image: linear-gradient(90deg, #FEDBAF 0%, #776740 100%)
+  border-image-slice: 1

@@ -1,0 +1,290 @@
+@media(max-width: 1680px)
+  .wrapper
+    .logo
+      width: calc(272 / 1680 * 100vw)
+      top: calc(30 / 1680 * 100vw)
+      height: calc(170 / 1680 * 100vh)
+      img
+        // width: 100%
+        // height: 100%
+  .page
+    padding-top: calc(250 / 1680 * 100vw)
+    padding-right: calc(185 / 1680 * 100vw)
+    padding-bottom: calc(110 / 1680 * 100vw)
+    padding-left: calc(185 / 1680 * 100vw)
+
+@media(max-width: 1440px)
+  h1
+    font-size: 50px
+    line-height: 68px
+  .content
+    &.page
+      padding-top: calc(300 / 1680 * 100vw)
+      padding-right: calc(185 / 1680 * 100vw)
+      padding-bottom: calc(110 / 1680 * 100vw)
+      padding-left: calc(185 / 1680 * 100vw)
+    &__title
+      margin-bottom: 40px
+
+@media(max-width: 1200px)
+  .wrapper
+    .logo
+      width: calc(272 / 1680 * 100vw)
+      height: calc(170 / 1680 * 100vh)
+      top: calc(30 / 1680 * 100vw)
+    &.load
+      .logo
+        width: 350px
+        height: 205px
+        &.anim2
+          top: calc(30 / 1680 * 100vw)
+          width: calc(272 / 1680 * 100vw)
+          height: calc(170 / 1680 * 100vh)
+      .line
+        bottom: 25%
+        &.anim
+          width: 450px
+
+  h1
+    font-size: 33px
+    line-height: 50px
+  body
+    font-size: 16px
+    line-height: 22px
+
+  .contact
+    &.page
+      padding-top: calc(220 / 1200 * 100vw)
+
+  .content
+    &.page
+      padding-top: calc(200 / 1200 * 100vw)
+      padding-bottom: calc(110 / 1200 * 100vw)
+      padding-right: 20px
+      padding-left: 20px
+    &__title
+      max-width: 500px
+      margin: 0 auto 30px
+    &__slider
+      &-item
+        p
+          max-width: 540px
+
+@media(max-height: 950px)
+  body
+    font-size: calc(20 / 950 * 100vh)
+  .content
+    &__langs
+      margin-top: 25px
+    &__title
+      font-size: calc(70 / 950 * 100vh)
+      line-height: calc(80 / 950 * 100vh)
+      margin-bottom: calc(30 / 950 * 100vh)
+    &__tabs
+      // height: calc(110 / 950 * 100vh)
+      padding-bottom: calc(40 / 950 * 100vh)
+    &__tab
+      padding: 8px 17px
+      font-size: 16px
+      line-height: 19px
+    &__slider
+      &-item
+        p
+          max-width: calc(800 / 950 * 100vh)
+  .wrapper
+    .logo
+      width: calc(200 / 1680 * 100vw)
+      height: calc(210 / 1680 * 100vh)
+      top: calc(30 / 1680 * 100vw)
+      img
+        width: 100%
+        height: 100%
+    &.load
+      .logo
+        width: 450px
+        &.anim2
+          width: calc(200 / 1680 * 100vw)
+          height: calc(210 / 1680 * 100vh)
+          top: calc(30 / 1680 * 100vw)
+      .line
+        &.anim
+          width: 500px
+  .slick-dots
+    bottom: -45px
+  .page
+    &.content
+      padding-top: calc(160 / 950 * 100vh)
+      padding-right: calc(185 / 950 * 100vh)
+      padding-bottom: calc(110 / 950 * 100vh)
+      padding-left: calc(185 / 950 * 100vh)
+    &.gallery
+      padding-top: calc(150 / 950 * 100vh)
+      padding-right: calc(185 / 950 * 100vh)
+      padding-bottom: calc(110 / 950 * 100vh)
+      padding-left: calc(185 / 950 * 100vh)
+  .gallery
+    &__slider
+      &-item
+        img
+          max-height: calc(630 / 950 * 100vh)
+
+@media(max-width: 1000px)
+  .contact
+    &__title
+      font-size: 11px
+    &__form
+      &-box
+        &:last-child
+          max-width: 100%
+      &-input
+        width: 300px
+        &:not(:first-child)
+          margin-top: 20px
+      &-inner
+        display: block
+  .radio
+    margin-bottom: 30px
+    &__title
+      font-size: 14px
+      margin-bottom: 10px
+  .content
+    &.page
+      padding: 0
+      padding-top: calc(200 / 1200 * 100vw)
+      padding-left: 10px
+      padding-right: 10px
+    &__slider
+      &-item
+        p
+          &:last-child
+            max-width: 540px
+  .gallery
+    &.page
+      padding-top: 150px
+      padding-bottom: 80px
+      padding-left: 0
+      padding-right: 0
+    &__slider
+      width: 100vw
+      height: auto
+      &-item
+        img
+          object-fit: cover
+
+@media(max-width: 767px)
+  h1
+    font-size: 22px !important
+    line-height: 30px !important
+
+  body
+    font-size: 12px
+    line-height: 20px
+  .radio
+    margin-bottom: 20px
+    &__box
+      &:nth-child(2)
+        row-gap: 10px
+        column-gap: 18px
+    &__fake
+      width: 15px
+      height: 15px
+    &__title
+      font-size: 11px
+
+  .gallery
+    &.page
+      padding-top: 110px
+  .contact
+    &__logo
+      max-width: 140px
+    &__form
+      &-input
+        width: 100%
+        font-size: 12px
+        height: 25px
+        &::placeholder
+          font-size: 12px
+        &:not(:last-child)
+          margin-top: 10px
+    &__title
+      font-size: 10px
+      margin-bottom: 20px
+      span
+        display: none
+  .wrapper
+    padding-bottom: 30px
+    .logo
+      width: 125px
+      height: 90px
+      &.small
+        width: 100px
+        height: 68px
+    &.load
+      .logo
+        width: 200px
+        height: 150px
+        &.anim2
+          width: 125px
+          height: 90px
+          top: calc(30 / 1680 * 100vw)
+      .line
+        bottom: 35%
+        &.anim
+          width: 300px
+
+  .content
+    &.page
+      padding-top: calc(300 / 1200 * 100vw)
+    &__langs
+      margin-bottom: 15px
+    &__tabs
+      padding-bottom: 20px
+    &__title
+      margin-bottom: 20px
+    &__lang
+      font-size: 11px
+  .slick-dots
+    bottom: -35px
+    button
+      width: 10px
+      height: 10px
+  .button
+    font-size: 15px
+    line-height: 19px
+
+@media(max-height: 600px)
+  .lang
+    padding: 2px 12px
+  .wrapper
+    .logo
+      width: 100px
+      height: 68px
+    &.load
+      .logo
+        width: 200px
+        height: 150px
+        &.anim2
+          width: 100px
+          height: 68px
+          top: calc(30 / 1680 * 100vw)
+  .content
+    &__langs
+      margin-top: 5px
+    &__title
+      margin-bottom: 10px
+    &__slider
+      &-item
+        p
+          font-size: 11px
+  .button
+    font-size: 12px
+    width: 110px
+    padding-top: 4px
+    padding-bottom: 4px
+  .gallery
+    &.page
+      padding-top: 90px
+    &__slider
+      &-item
+        img
+          max-height: calc(600 / 950 * 100vh)

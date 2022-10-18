@@ -1,0 +1,95 @@
+.content
+  opacity: 1
+  visibility: visible
+  transition: all .4s
+  &.hidden
+    opacity: 0
+    visibility: hidden
+  &__langs
+    display: flex
+    justify-content: center
+    margin-bottom: 35px
+  &__tabs
+    display: flex
+    justify-content: center
+    column-gap: 25px
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    padding-bottom: 40px
+  &__tab
+    &.hidden
+      display: none
+  &__title
+    margin-bottom: 60px
+  &__slider
+    margin-bottom: 90px
+    .content__slider-title
+      margin-bottom: 35px
+    &-item
+      p
+        text-align: center
+        max-width: 796px
+        margin: 0 auto
+        &:not(:last-child)
+          margin-bottom: 10px
+        &:last-child
+          max-width: 727px
+    &-list
+      li
+        text-transform: uppercase
+        text-align: center
+        &:not(:last-child)
+          margin-bottom: 5px
+
+.gallery
+  opacity: 1
+  visibility: visible
+  transition: all .4s
+  &.page
+    padding-top: 210px
+  &.hidden
+    opacity: 0
+    visibility: hidden
+  &__slider
+    .slick-dots
+      bottom: -40px
+    .slick-prev
+      display: block !important
+      position: absolute
+      font-size: 0
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      width: 50%
+      background-color: transparent
+      border: none
+      z-index: 5
+
+    .slick-next
+      font-size: 0
+      position: absolute
+      top: 0
+      right: 0
+      left: unset
+      bottom: 0
+      width: 50%
+      background-color: transparent
+      border: none
+      z-index: 5
+    &-item
+      img
+        max-width: 1350px
+        max-height: 680px
+        margin: 0 auto
+
+.page
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 3
+  padding: 250px 185px 110px 185px

@@ -1,0 +1,123 @@
+.contact
+  display: block
+  &.hidden
+    display: none
+  &__logo
+    display: block
+    max-width: 217px
+    margin: 0 auto 30px
+    img
+      width: 100%
+  &__title
+    font-weight: 400
+    font-size: 15px
+    line-height: 22px
+    text-align: center
+    letter-spacing: 0.3em
+    text-transform: uppercase
+    max-width: 940px
+    margin: 0 auto 30px
+  &__form
+    &-right
+      font-weight: 400
+      font-size: 11px
+      line-height: 13px
+      text-align: center
+      letter-spacing: -0.02em
+      color: #FFFFFF
+      @extend %gothic
+    &-inner
+      max-width: 940px
+      margin: 0 auto
+      display: flex
+      justify-content: space-between
+    &-box
+      &:last-child
+        max-width: 393px
+      &:first-child
+        .radio__box
+          flex-direction: column
+          align-items: flex-start
+    &-copy
+      text-align: center
+      font-size: 13.7106px
+      line-height: 16px
+      text-align: center
+      letter-spacing: -0.02em
+      margin-bottom: 25px
+      a
+        text-decoration: underline
+    &-btn
+      +flex-center
+      width: 185px
+      height: 35px
+      background-color: transparent
+      @extend %gradient-border
+      font-size: 16.4527px
+      line-height: 21px
+      letter-spacing: 0.11em
+      text-transform: uppercase
+      color: #fff
+      cursor: pointer
+      margin: 0 auto 30px
+    &-input
+      display: block
+      width: 388px
+      height: 32px
+      color: #fff
+      background-color: transparent
+      border: none
+      border-bottom: 2px solid #fff
+      padding-bottom: 10px
+      font-size: 16.4527px
+      line-height: 20px
+      letter-spacing: 0.11em
+      padding: 0 5px
+      &:not(:first-child)
+        margin-top: 50px
+      &::placeholder
+        text-transform: uppercase
+        color: #fff
+        font-size: 16.4527px
+        line-height: 20px
+        letter-spacing: 0.11em
+
+.radio
+  margin-bottom: 70px
+  &__title
+    font-size: 16.4527px
+    line-height: 20px
+    letter-spacing: 0.11em
+    text-transform: uppercase
+    @extend %gradient-text
+    margin-bottom: 20px
+  &__fake
+    display: block
+    width: 26px
+    height: 26px
+    border: 1px solid #ffffff
+    background-color: transparent
+  &__label
+    display: flex
+    align-items: center
+    column-gap: 14px
+    position: relative
+    cursor: pointer
+    &:not(:last-child)
+      margin-bottom: 15px
+  &__input
+    position: absolute
+    opacity: 0
+    visibility: hidden
+    &:checked  + .radio__fake
+      background-color: #fff
+  &__box
+    display: flex
+    align-items: center
+    column-gap: 25px
+    flex-wrap: wrap
+    row-gap: 15px
+
+    label
+      &:not(:last-child)
+        margin-bottom: 0px

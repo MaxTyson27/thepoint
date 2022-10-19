@@ -13,15 +13,15 @@ html(lang="ru")
               a(href="#" data-lang='ru').content__lang.lang.active ru
               a(href="#" data-lang='en').content__lang.lang en
             .line
-            h1.content__title Outstanding Residences<br>in the Prine Area of Sochi
+            h1.content__title Outstanding Residences<br>in the Prime Area of Sochi
             .content__slider
               .content__slider-item
                 .content__slider-text.ru
-                  p The POINT&nbsp;&mdash; комплекс, состоящий из&nbsp;17&nbsp;резиденций и&nbsp;Grand Penthouse, &mdash; это&nbsp;воплощение традиций клубного отдыха Французской Ривьеры на&nbsp;Черноморском побережье.
-                  p Утончённая эстетика белоснежных фасадов в&nbsp;стиле Belle Epoque,изысканные интерьеры, безукоризненные планировочныеи технические решения, клубная инфраструктура с&nbsp;White Glove Serviceставят The POINT на&nbsp;один уровень с&nbsp;жемчужинами Лазурного берегатакими как Grand-Hotel du&nbsp;Cap-Ferrat и&nbsp;Hotel du&nbsp;Cap-Eden-Rocи делают его самым желанным и&nbsp;дорогим курортным клубным комплексомUltra-luxury класса на&nbsp;сочинском побережье.
+                  p The POINT&nbsp;&mdash; комплекс, состоящий из&nbsp;17&nbsp;резиденций и&nbsp;Grand Penthouse,&nbsp;&mdash; это воплощение традиций клубного отдыха Французской Ривьеры на&nbsp;Черноморском побережье. 
+                  p Утончённая эстетика белоснежных фасадов в&nbsp;стиле Belle Epoque, изысканные интерьеры, безукоризненные планировочные и&nbsp;технические решения, клубная инфраструктура с&nbsp;White Glove Service ставят The POINT на&nbsp;один уровень с&nbsp;жемчужинами Лазурного берега такими как Grand-Hotel du&nbsp;Cap-Ferrat и&nbsp;Hotel du&nbsp;Cap-Eden-Roc и&nbsp;делают его самым желанным и&nbsp;дорогим курортным клубным комплексом Ultra-luxury класса на&nbsp;сочинском побережье.
                 .content__slider-text.en
                   p The POINT is&nbsp;a&nbsp;residential complex consisting of&nbsp;17&nbsp;residences and the Grand Penthouse. It&nbsp;is&nbsp;the high-end French Riviera vacation tradition come to&nbsp;life on&nbsp;the Black Sea coast.
-                  p The sublime beauty of&nbsp;snow-white facades that follow the Belle &Eacute;poque style,the refined interiors, the impeccable layouts and engineering as&nbsp;well as&nbsp;club infrastructure with White Glove Service put the POINT on&nbsp;a&nbsp;parwith such Cote d&rsquo;Azur vacation gems as&nbsp;the Grand-H&ocirc;tel du&nbsp;Cap-Ferratand the Hotel du&nbsp;Cap-Eden-Roc, making it&nbsp;the most desirableand upscale ultra-luxury resort club complex on&nbsp;the Sochi coast.
+                  p The sublime beauty of&nbsp;snow-white facades that follow the Belle &Eacute;poque style, the refined interiors, the impeccable layouts and engineering as&nbsp;well as&nbsp;club infrastructure with White Glove Service put the POINT on&nbsp;a&nbsp;par with such Cote d&rsquo;Azur vacation gems as&nbsp;the Grand-H&ocirc;tel du&nbsp;Cap-Ferrat and the Hotel du&nbsp;Cap-Eden-Roc, making it&nbsp;the most desirable and upscale ultra-luxury resort club complex on&nbsp;the Sochi coast.
               .content__slider-item
                 p.content__slider-title.ru Команда проекта
                 p.content__slider-title.en Project team
@@ -35,8 +35,10 @@ html(lang="ru")
                   li Nedvex
                   li APD
             .content__tabs
-              a(href="#gallery").content__tab.button GALLERY
-              a(href="#contact").content__tab.button INQUIRE
+              a(href="#gallery").content__tab.button.en GALLERY
+              a(href="#gallery").content__tab.button.ru ГАЛЕРЕЯ
+              a(href="#contact").content__tab.button.ru ЗАЯВКА
+              a(href="#contact").content__tab.button.en INQUIRE
         .gallery.page.tab#gallery.hidden
           .gallery__slider
             .gallery__slider-item
@@ -60,8 +62,10 @@ html(lang="ru")
             .gallery__slider-item
               img(src="images/gallery/10.jpg", alt="")
           .content__tabs
-            a(href="#about").content__tab.button ABOUT
-            a(href="#contact").content__tab.button INQUIRE
+            a(href="#about").content__tab.button.en ABOUT
+            a(href="#about").content__tab.button.ru ОПИСАНИЕ
+            a(href="#contact").content__tab.button.en INQUIRE
+            a(href="#contact").content__tab.button.ru ЗАЯВКА
         .contact.tab#contact.hidden
           a(href="index.html").contact__logo
             img(src="images/logo.svg", alt="logo icon")
@@ -69,7 +73,7 @@ html(lang="ru")
             a(href="#" data-lang='ru').content__lang.lang.active ru
             a(href="#" data-lang='en').content__lang.lang en
           h2.contact__title.ru Посещение офиса продаж только по&nbsp;предварительной регистрации.<br>Чтобы мы&nbsp;могли предоставить вам детальную информацию, уточните для нас следующие данные:
-          h2.contact__title.en Visiting the sales office is possible only by prior registration.<br>To enable us to provide you with detailed information,please complete the following form for us:
+          h2.contact__title.en Visiting the sales office is possible only by prior registration.<br>To enable us to provide you with detailed information, please complete the following form for us:
           form.contact__form(action="send.php")
             .contact__form-inner
               .contact__form-box
@@ -156,7 +160,7 @@ html(lang="ru")
                       p.radio__text.en No
             p.contact__form-copy.ru Отправляя заявку, вы соглашаетесь с <a href='https://nedvex.ru/privacy' target="_blank">политикой конфиденциальности</a>
             p.contact__form-copy.en By submitting an application, you agree to the <a href='https://nedvex.ru/privacy' target="_blank">privacy policy</a>
-            button(type='submit').contact__form-btn <span class='ru'>Отправить</span><span class='en'>Send</span>
+            button(type='submit').contact__form-btn <span class='ru'>Отправить</span><span class='en'>Submit</span>
             p.contact__form-right.ru 2022 © The Point. Все права защищены.<br>Проектная декларация: <a href='https://дом.рф' target="_blank">https://наш.дом.рф</a>
             p.contact__form-right.en 2022 © The Point. All Rights Reserved.<br>Project Statement at: <a href='https://дом.рф' target="_blank">https://наш.дом.рф</a>
       .thank

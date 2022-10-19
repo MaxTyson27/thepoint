@@ -37,7 +37,7 @@
         width: 350px
         height: 205px
         &.anim2
-          top: calc(30 / 1680 * 100vw)
+          top: calc(110 / 1680 * 100vw)
           width: calc(272 / 1680 * 100vw)
           height: calc(170 / 1680 * 100vh)
       .line
@@ -93,9 +93,9 @@
           max-width: calc(800 / 950 * 100vh)
   .wrapper
     .logo
-      width: calc(200 / 1680 * 100vw)
+      width: calc(200 / 950 * 100vh)
       height: calc(210 / 1680 * 100vh)
-      top: calc(30 / 1680 * 100vw)
+      top: calc(30 / 950 * 100vh)
       img
         width: 100%
         height: 100%
@@ -103,9 +103,9 @@
       .logo
         width: 450px
         &.anim2
-          width: calc(200 / 1680 * 100vw)
+          width: calc(200 / 950 * 100vh)
           height: calc(210 / 1680 * 100vh)
-          top: calc(30 / 1680 * 100vw)
+          top: calc(85 / 950 * 100vh)
       .line
         &.anim
           width: 500px
@@ -170,7 +170,11 @@
       &-item
         img
           object-fit: cover
-
+  .wrapper
+    &.load
+      .logo
+        &.anim2
+          top: calc(100 / 1000 * 100vw)
 @media(max-width: 767px)
   h1
     font-size: 22px !important
@@ -216,6 +220,7 @@
     .logo
       width: 125px
       height: 90px
+      top: calc(30 / 767 * 100vw)
       &.small
         width: 100px
         height: 68px
@@ -226,7 +231,7 @@
         &.anim2
           width: 125px
           height: 90px
-          top: calc(30 / 1680 * 100vw)
+          top: calc(120 / 767 * 100vw)
       .line
         bottom: 35%
         &.anim
@@ -266,7 +271,7 @@
         &.anim2
           width: 100px
           height: 68px
-          top: calc(30 / 1680 * 100vw)
+          top: calc(50 / 600 * 100vh)
   .content
     &__langs
       margin-top: 5px

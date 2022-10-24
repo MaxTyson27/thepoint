@@ -9,6 +9,27 @@
     display: flex
     justify-content: center
     margin-bottom: 35px
+  &__copy
+    position: absolute
+    width: 100%
+    left: 50%
+    bottom: 10px
+    transform: translateX(-50%)
+    text-align: center
+    transition: all 1s
+    opacity: 0
+    visibility: hidden
+    font-weight: 400
+    font-size: 11px
+    line-height: 13px
+    letter-spacing: -0.02em
+    color: #FFFFFF
+    @extend %gothic
+    a
+      text-decoration: underline
+    &.anim
+      opacity: 1
+      visibility: visible
   &__tabs
     display: flex
     justify-content: center
@@ -52,6 +73,8 @@
   &.hidden
     opacity: 0
     visibility: hidden
+  &__image--sm
+    display: none
   &__slider
     .slick-dots
       bottom: -40px

@@ -14,28 +14,80 @@ $(function () {
     }
   });
   $('.phone').inputmask({ "mask": "+7(999) 999-99-99" });
+
   $("form").submit(function (event) {
-  event.preventDefault();
-  var str = $(this).serialize();
-  if (true) {
-    $.ajax({
-      type: "POST",
-      url: "send.php",
-      data: str,
-      success: function () {
-        console.log("send");
-        $('.thank').addClass('active')
-        $("form")[0].reset();
-      },
-      error: function () {
-        console.log("fail");
-      },
-    });
-  }
-  return false;
-});
+    event.preventDefault();
+    var str = $(this).serialize();
+    if (validateRadio()) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: str,
+        success: function () {
+          console.log("send");
+          $('.thank').addClass('active')
+          $("form")[0].reset();
+        },
+        error: function () {
+          console.log("fail");
+        },
+      });
+    } else {
+      $('.error').addClass('active')
+    }
+  });
+
 });
 
+
+const validateRadio = () => {
+
+  let valid = false
+
+  const checkedAllRadio = {
+    project: false,
+    size: false,
+    price: false,
+    agent: false,
+  }
+
+  const radioElems = {
+    project: [...document.querySelectorAll(`input[name='project'`)],
+    size: [...document.querySelectorAll(`input[name='size'`)],
+    price: [...document.querySelectorAll(`input[name='price'`)],
+    agent: [...document.querySelectorAll(`input[name='agent'`)],
+  }
+
+  for(let key in radioElems){
+    radioElems[key].forEach( radio => {
+      switch (radio.checked) {
+        case true:
+          checkedAllRadio[key] = !checkedAllRadio[key]
+          break;
+      
+        default:
+          break;
+      }
+
+    });
+  }
+
+  const isCheckedAllRadioArray = Object.keys(checkedAllRadio).map(key => {
+    return checkedAllRadio[key]
+  })
+
+  const isCheckedAllRadio = isCheckedAllRadioArray.every(bool => {
+    return bool
+  })
+
+  if(isCheckedAllRadio){
+    valid = true
+  }
+
+  return valid
+
+
+}
 
 
 const validateInputs = () => {
@@ -61,20 +113,30 @@ const animationContent = () => {
     })
   }
 
+
+
   animatePromise('.logo', 'anim', 1000, false).then((res) => {
 
     return animatePromise('.line', 'anim', 500, false).then(res => {
 
       return animatePromise('.line', 'hidden', 1000, false).then(res => {
+        
+        return animatePromise('.content__copy', 'anim', 500, false).then(res => {
 
-        return animatePromise('.logo', 'anim2', 1000, false).then(res => {
+          return animatePromise('.logo', 'anim2', 1000, false).then(res => {
 
-          return animatePromise('.content__title', 'anim', 1000, false).then(res => {
-            return animatePromise('.logo', 'anim', 0, true).then(res => {
-              return animatePromise('.wrapper', 'load', 500, true)
+            return animatePromise('.content__title', 'anim', 1000, false).then(res => {
+
+              return animatePromise('.logo', 'anim', 0, true).then(res => {
+
+                return animatePromise('.content__copy', 'anim', 0, true).then(res => {
+
+                  return animatePromise('.wrapper', 'load', 500, true)
+                })
+              })            
             })
           })
-        })
+         })
       })
     })
   })
@@ -172,7 +234,5 @@ const changeLang = () => {
 
 changeLang()
 validateInputs()
-
 tabsLogic()
-
 animationContent()

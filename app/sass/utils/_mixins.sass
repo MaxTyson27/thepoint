@@ -61,6 +61,17 @@
   -webkit-text-fill-color: transparent
 
 %gradient-border
-  border: 1.5px solid transparent
+  border: 0.5px solid transparent
   border-image: linear-gradient(90deg, #FEDBAF 0%, #776740 100%)
   border-image-slice: 1
+
+%border-hover
+  content: ''
+  position: absolute
+  height: 1px
+  background: linear-gradient(90deg, #FEDBAF 0%, #776740 100%)
+  // background-color: #fff
+  left: 50%
+  transform: translateX(-50%)
+  opacity: 0
+  transition: all .3s

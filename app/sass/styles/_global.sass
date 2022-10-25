@@ -16,11 +16,13 @@ body
   overflow: hidden
   padding-top: 30px
   padding-bottom: 100px
+  +bgp('../images/bg.jpg', cover, top, center)
   background-color: $bg
   position: relative
   .line
     transition: all 1s
-  .content__lang,
+  .content__lang
+    transition: all 1s
   .content__slider,
   .content__tabs
     transition: all .5s ease-in .6s
@@ -105,14 +107,26 @@ h1
   display: block
   text-align: center
   padding: 13px 0px
-  width: 145px
-  font-size: 18px
-  line-height: 22px
-  letter-spacing: 0.15em
+  width: 155px
   @extend %gradient-border
-  text-transform: uppercase
-  @extend %gradient-text
-  @extend %gothic
+
+  span
+    text-transform: uppercase
+    @extend %gradient-text
+    @extend %gothic
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 0.15em
+    position: relative
+    &::before
+      @extend %border-hover
+      width: 0%
+      bottom: 0px
+  &:hover
+    span
+      &::before
+        opacity: 1
+        width: 100%
 
 .lang
   cursor: pointer
@@ -126,8 +140,19 @@ h1
   @extend %gothic
   @extend %gradient-text
   transition: all .3s
+  position: relative
+  &:hover
+    &::before
+      opacity: 1
+      width: 50%
+  &::before
+    @extend %border-hover
+    width: 0%
+    bottom: 5px
   &.active
     @extend %gradient-border
+    &::before
+      display: none
 
 .slick-dots
   position: absolute

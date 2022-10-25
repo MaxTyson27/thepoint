@@ -39,6 +39,7 @@
     bottom: 0
     width: 100%
     padding-bottom: 40px
+
   &__tab
     &.hidden
       display: none
@@ -68,14 +69,20 @@
   opacity: 1
   visibility: visible
   transition: all .4s
+  .content__tabs
+    opacity: 1
+    transition: all 1s
   &.page
     padding-top: 210px
   &.hidden
     opacity: 0
     visibility: hidden
-  &__image--sm
-    display: none
+    .content__tabs
+      opacity: 0
+
   &__slider
+    .gallery__image--sm
+      display: none
     .slick-dots
       bottom: -40px
     .slick-prev
@@ -107,7 +114,6 @@
         max-width: 1350px
         max-height: 680px
         margin: 0 auto
-
 .page
   position: absolute
   left: 0

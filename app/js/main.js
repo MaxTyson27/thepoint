@@ -15,6 +15,10 @@ $(function () {
   });
   $('.phone').inputmask({ "mask": "+7(999) 999-99-99" });
 
+  $('.logo').on('click', e => {
+    e.preventDefault()
+  })
+
   $("form").submit(function (event) {
     event.preventDefault();
     var str = $(this).serialize();
@@ -149,9 +153,9 @@ const tabsLogic = () => {
   const logo = document.querySelector('.logo')
 
   buttons.forEach(btn => {
-    btn.addEventListener('click', e => {
+    btn.addEventListener('click', function (e) {
       e.preventDefault()
-      const id = e.target.getAttribute('href')
+      const id = this.getAttribute('href')
       const elem = document.querySelector(id)
       tabs.forEach(tab => {
         tab.classList.add('hidden')

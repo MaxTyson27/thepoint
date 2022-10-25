@@ -21,11 +21,10 @@
     &-right
       font-weight: 400
       font-size: 11px
-      line-height: 13px
+      line-height: 140%
       text-align: center
-      letter-spacing: -0.02em
+      letter-spacing: 0.02em
       color: #FFFFFF
-      @extend %gothic
     &-inner
       max-width: 940px
       margin: 0 auto
@@ -42,24 +41,43 @@
       text-align: center
       font-size: 13.7106px
       line-height: 16px
-      text-align: center
-      letter-spacing: -0.02em
+      letter-spacing: 0.03em
       margin-bottom: 25px
       a
-        text-decoration: underline
+        position: relative
+        &:hover
+          &::before
+            width: 100%
+            opacity: 1
+        &::before
+          @extend %border-hover
+          width: 0%
+          bottom: -3px
     &-btn
       +flex-center
       width: 185px
-      height: 35px
+      height: 45px
       background-color: transparent
       @extend %gradient-border
-      font-size: 16.4527px
+      font-size: 16px
       line-height: 21px
       letter-spacing: 0.11em
       text-transform: uppercase
       color: #fff
       cursor: pointer
       margin: 0 auto 30px
+      span
+        position: relative
+        &::before
+          @extend %border-hover
+          width: 0%
+          bottom: 0px
+      &:hover
+        span
+          &::before
+            width: 100%
+            opacity: 1
+
     &-input
       display: block
       width: 388px
@@ -85,7 +103,7 @@
 .radio
   margin-bottom: 70px
   &__title
-    font-size: 16.4527px
+    font-size: 16px
     line-height: 20px
     letter-spacing: 0.11em
     text-transform: uppercase

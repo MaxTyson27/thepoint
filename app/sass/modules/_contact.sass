@@ -10,13 +10,14 @@
       width: 100%
   &__title
     font-weight: 400
-    font-size: 15px
-    line-height: 22px
+    font-size: 16px
+    line-height: 140%
     text-align: center
-    letter-spacing: 0.3em
+    letter-spacing: 0.16em
     text-transform: uppercase
-    max-width: 940px
+    max-width: 875px
     margin: 0 auto 30px
+    @extend %gradient-text
   &__form
     &-right
       font-weight: 400
@@ -45,21 +46,22 @@
       margin-bottom: 25px
       a
         position: relative
-        &:hover
-          &::before
-            width: 100%
-            opacity: 1
         &::before
-          @extend %border-hover
-          width: 0%
+          content: ''
+          position: absolute
+          left: 0
+          height: 1px
+          background-color: #fff
+          width: 100%
+          opacity: 1
           bottom: -3px
     &-btn
-      +flex-center
       width: 185px
       height: 45px
+      display: block
       background-color: transparent
       @extend %gradient-border
-      font-size: 16px
+      font-size: 15px
       line-height: 21px
       letter-spacing: 0.11em
       text-transform: uppercase
@@ -67,7 +69,10 @@
       cursor: pointer
       margin: 0 auto 30px
       span
+        width: max-content
+        margin: 0 auto
         position: relative
+        @extend %gradient-text
         &::before
           @extend %border-hover
           width: 0%
@@ -101,9 +106,9 @@
         letter-spacing: 0.11em
 
 .radio
-  margin-bottom: 70px
+  margin-bottom: calc(50 / 1680 * 100vh)
   &__title
-    font-size: 16px
+    font-size: 15px
     line-height: 20px
     letter-spacing: 0.11em
     text-transform: uppercase

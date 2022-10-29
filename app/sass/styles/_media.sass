@@ -77,12 +77,12 @@
     &__langs
       margin-top: 25px
     &__title
-      // font-size: calc(70 / 950 * 100vh)
-      // line-height: calc(80 / 950 * 100vh)
+      font-size: calc(67 / 950 * 100vh)
+      line-height: calc(82 / 950 * 100vh)
       margin-bottom: calc(30 / 950 * 100vh)
     &__tabs
       // height: calc(110 / 950 * 100vh)
-      padding-bottom: calc(40 / 950 * 100vh)
+      // padding-bottom: calc(40 / 950 * 100vh)
     &__tab
       padding: 8px 17px
       font-size: 16px
@@ -112,7 +112,7 @@
         &.anim
           width: 500px
   .slick-dots
-    bottom: -45px
+    bottom: -35px
   .page
     &.content
       padding-top: calc(160 / 950 * 100vh)
@@ -137,14 +137,14 @@
     &__form
       &-input
         &:not(:first-child)
-          margin-top: calc(30 / 950 * 100vh)
+          margin-top: calc(20 / 950 * 100vh)
     &__title
       font-size: calc(15 / 950 * 100vh)
       margin-bottom: calc(30 / 950 * 100vh)
   .radio
-    margin-bottom: calc(50 / 950 * 100vh)
+    margin-bottom: calc(30 / 950 * 100vh)
     &__title
-      font-size: calc(16 / 950 * 100vh)
+      font-size: calc(15 / 950 * 100vh)
       margin-bottom: calc(20 / 950 * 100vh)
     &__text
       font-size: calc(16 / 950 * 100vh)
@@ -152,26 +152,71 @@
       width: 20px
       height: 20px
 
+@media(max-width: 1200px)
+  .content__title
+    max-width: 100%
+    font-size: 52px
+    line-height: 60px
+
+@media(max-height: 900px)
+  .content__langs
+    margin-bottom: 20px
+  .contact
+    &__form
+      &__title
+        font-size: calc(14 / 900 * 100vh)
+      &-input
+        font-size: 14px
+        &::placeholder
+          font-size: 14px
+    &__title
+      font-size: calc(15 / 900 * 100vh)
+      margin-bottom: calc(20 / 900 * 100vh)
+  .radio
+    margin-bottom: calc(18 / 900 * 100vh)
+    &__box
+      row-gap: 10px
+
 @media(max-width: 1000px)
   .contact
+    .content__langs
+      margin-top: 30px
+      margin-bottom: 30px
     &__title
-      font-size: 11px
+      // font-size: 11px
+      // max-width: 681px
+      // margin-bottom: 20px
     &__form
+      &-inner
+        column-gap: 90px
+        justify-content: center
+        // margin-bottom: 50px
       &-box
         &:last-child
-          max-width: 100%
+          max-width: 283px
       &-input
         width: 300px
         &:not(:first-child)
           margin-top: 20px
-      &-inner
-        display: block
+
   .radio
     margin-bottom: 30px
     &__title
-      font-size: 14px
+      // font-size: 14px
       margin-bottom: 10px
+    &__fake
+      width: 18px
+      height: 18px
+
   .content
+    &__title
+      max-width: 637px
+      margin-bottom: 30px
+      font-size: 44.0143px
+      line-height: 53px
+    &__langs
+      margin-top: 60px
+      margin-bottom: 65px
     &.page
       padding: 0
       padding-top: calc(200 / 1200 * 100vw)
@@ -180,8 +225,11 @@
     &__slider
       &-item
         p
+          max-width: 590px
+          font-size: 16px
+          line-height: 140%
           &:last-child
-            max-width: 540px
+            max-width: 560px
   .gallery
     &.page
       padding-top: 150px
@@ -195,24 +243,38 @@
         display: none
       .gallery__image--sm
         display: block
+        width: 100%
       &-item
         img
           object-fit: cover
   .wrapper
+    .logo
+      width: calc(200 / 950 * 100vh)
+      height: calc(210 / 1680 * 100vh)
+      top: calc(30 / 950 * 100vh)
+      img
+        width: 100%
+        height: 100%
     &.load
       .logo
+        width: 450px
         &.anim2
-          top: calc(100 / 1000 * 100vw)
+          width: calc(200 / 950 * 100vh)
+          height: calc(210 / 1680 * 100vh)
+          top: calc(85 / 950 * 100vh)
+
+@media(max-width: 768px)
+
 @media(max-width: 767px)
   h1
-    font-size: 27px !important
+    font-size: 30px !important
     line-height: 32px !important
 
   body
     font-size: 12px
     line-height: 20px
   .radio
-    margin-bottom: 20px
+    margin-bottom: 35px
     &__box
       &:nth-child(2)
         row-gap: 10px
@@ -225,26 +287,59 @@
 
   .gallery
     &.page
-      padding-top: 110px
+      padding-top: 100px
+    .content__tabs
+      margin-bottom: 0px
+    &__slider
+      height: 400px
+      &-item
+        img
+          height: 400px
   .contact
+    padding-bottom: 20px
     &__logo
       max-width: 140px
+    .content__langs
+      margin-top: 30px
+      margin-bottom: 30px
     &__form
+      &-btn
+        font-size: 10.7056px
+        line-height: 13px
+        letter-spacing: 0.15em
+        width: 131px
+        height: 25px
+        &:hover
+          span
+            &::before
+              display: none
+      &-copy
+        font-size: 9.78539px
+        line-height: 12px
+      &-right
+        font-size: 7.1371px
+        line-height: 122.21%
+      &-inner
+        display: block
+        max-width: 291px
       &-input
         width: 100%
         font-size: 12px
+        border-bottom: 1px solid #fff
         height: 25px
         &::placeholder
           font-size: 12px
         &:not(:last-child)
           margin-top: 10px
     &__title
-      font-size: 10px
-      margin-bottom: 20px
-      span
-        display: none
+      font-size: 12.093px
+      line-height: 140%
+      letter-spacing: 0.11em
+      margin-bottom: 25px
+      max-width: 337px
+
   .wrapper
-    padding-bottom: 30px
+    padding-bottom: 0px
     .logo
       width: 125px
       height: 90px
@@ -269,19 +364,31 @@
     &.page
       padding-top: calc(300 / 1200 * 100vw)
     &__langs
-      margin-bottom: 15px
+      margin-top: 40px
+      margin-bottom: 25px
     &__tabs
-      padding-bottom: 20px
+      margin-bottom: 50px
+      bottom: 0
     &__title
       margin-bottom: 20px
     &__lang
       font-size: 11px
       padding: 4px 10px
     &__slider
+      &-text--lg
+        display: none
+      &-text--sm
+        display: block
+
       &-item
+        .content__slider-title
+          margin-bottom: 10px !important
         p
-          font-size: 11px
-          line-height: 18px
+          font-size: 12px
+          line-height: 140.2%
+          max-width: 290px
+          &:last-child
+            max-width: 316px
   .slick-dots
     bottom: -35px
     button
@@ -290,6 +397,14 @@
   .button
     font-size: 15px
     line-height: 19px
+    // padding: 15px 17px
+  .wrapper
+    .logo
+      width: 155px
+    &.load
+      .logo
+        &.anim2
+          width: 155px
 
 @media(max-height: 600px)
   .lang
@@ -308,40 +423,74 @@
           top: calc(50 / 600 * 100vh)
   .content
     &__langs
-      margin-top: 5px
+      margin-top: 10px
+      margin-bottom: 10px
     &__title
       margin-bottom: 10px
     &__slider
+      margin-bottom: 40px
       &-item
         p
           font-size: 11px
   .button
-    font-size: 12px
-    width: 110px
+
+    width: 135px
     padding-top: 4px
     padding-bottom: 4px
+    span
+      font-size: 12px
+
   .gallery
     &.page
       padding-top: 90px
     &__slider
+      height: 320px
+      margin-bottom: 50px
       &-item
         img
-          max-height: calc(600 / 950 * 100vh)
+          height: 320px
 
-@media(max-width: 767px) and (max-height: 900px)
-  .content__tabs
-    padding-bottom: 200px
-  .gallery
-    .content__tabs
-      padding-bottom: 20px
+@media(max-width: 767px) and (max-height: 600px)
 
-@media(max-width: 767px) and (max-height: 736px)
-  .content__tabs
-    padding-bottom: 150px
-  .gallery
-    .content__tabs
-      padding-bottom: 20px
+  .button
+    padding: 6px 17px
+  .content
+    &__langs
+      margin-bottom: 15px
+    &.page
+      padding-top: calc(100 / 600 * 100vh)
 
-@media(max-width: 767px) and (max-height: 700px)
-  .content__tabs
-    padding-bottom: 20px
+@media(max-width: 413px)
+  h1
+    font-size: 28px !important
+  .button
+    width: 135px
+    padding: 6px 17px
+    span
+      font-size: 13px
+  .content
+    &__slider
+      &-item
+        p
+          max-width: 300px
+          &:last-child
+            max-width: 300px
+
+@media(max-width: 374px)
+  .contact
+    &__title
+      font-size: 9.8047px
+      line-height: 140%
+  .content
+    &__title
+      font-size: 23px !important
+    &__slider
+      &-item
+        p
+          max-width: 270px
+          font-size: 10px
+          &:last-child
+            max-width: 270px
+  .button
+    span
+      font-size: 10px

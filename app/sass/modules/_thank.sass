@@ -16,16 +16,20 @@
     opacity: 1
     visibility: visible
   &__title
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
     font-weight: 400
     @extend %school-italic
-    font-size: 45px
-    line-height: 54px
+    font-size: calc(45 / 1680 * 100vw)
+    line-height: calc(54 / 1680 * 100vw)
     text-align: center
     color: #FFFFFF
   &__logo
     display: block
     max-width: 272px
-    margin: 0 auto 250px
+    margin: 0 auto
     img
       width: 100%
 
@@ -40,7 +44,7 @@
     padding: 30px 0
     &__logo
       max-width: 100px
-      margin: 0 auto 200px
+      margin: 0 auto
     &__title
       font-size: 17px
       line-height: 24px

@@ -168,7 +168,7 @@ const tabsLogic = () => {
       }
       if(id === '#contact'){
         document.querySelector('.logo').style.display = 'none'
-        if(document.documentElement.offsetHeight <= 1024){
+        if(document.documentElement.offsetWidth <= 1000){
           document.querySelector('.wrapper').style.height = '100%'
         }
       }
@@ -236,6 +236,14 @@ const changeLang = () => {
   });
 }
 
+const setPass = () => {
+  const pass = '1122'
+  const password = prompt('пароль')
+  if(password !== pass){
+    setPass()
+  }
+}
+setPass()
 changeLang()
 validateInputs()
 tabsLogic()

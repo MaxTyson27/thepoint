@@ -236,14 +236,14 @@ const changeLang = () => {
   });
 }
 
-const setPass = () => {
-  const pass = '1122'
-  const password = prompt('пароль')
-  if(password !== pass){
-    setPass()
-  }
-}
-setPass()
+// const setPass = () => {
+//   const pass = '1122'
+//   const password = prompt('пароль')
+//   if(password !== pass){
+//     setPass()
+//   }
+// }
+// setPass()
 changeLang()
 validateInputs()
 tabsLogic()

@@ -159,8 +159,9 @@
     line-height: 60px
 
 @media(max-height: 900px)
-  .content__langs
-    margin-bottom: 20px
+  .content
+    &__langs
+      margin-bottom: 20px
   .contact
     &__form
       &__title
@@ -177,6 +178,13 @@
     &__box
       row-gap: 10px
 
+@media(max-height: 850px)
+  .contact
+    &__form
+      &-btn
+        margin-bottom: 15px
+      &-right
+        font-size: 10px
 @media(max-width: 1000px)
   .contact
     .content__langs
